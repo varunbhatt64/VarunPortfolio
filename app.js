@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 const indexRoutes = require("./routes/index");
@@ -10,6 +11,8 @@ app.set("view engine", "ejs");
 // Set your middleware directory
 app.use(express.static("public"));
 // For post routes we get parameters in request.body
+// Allow your application to be consumed
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
