@@ -2580,6 +2580,22 @@ header .logo a {
 	color: #FF0077;
 }
 
+/* handle autofill styles */
+input:-webkit-autofill,
+textarea:-webkit-autofill
+{
+  -webkit-text-fill-color:rgba(255, 255, 255, 0.7);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus {
+	-webkit-text-fill-color: #FFFFFF;
+}
+
+textarea:-webkit-autofill:focus {
+	-webkit-text-fill-color: #FFFFFF;
+}
+
 /**
  * loader animation - (_layout.scss)
  * --------------------------------------------------------------- 
